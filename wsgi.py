@@ -3,7 +3,8 @@ application = Flask(__name__)
 
 @application.route("/")
 def hello():
-    return "Hello World! First OpenShift Python Program"
+    name = input("Please input your name: ")
+    return name + "Happy New Year!"
 
 if __name__ == "__main__":
     application.run()
