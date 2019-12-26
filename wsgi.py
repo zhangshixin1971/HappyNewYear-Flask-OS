@@ -1,16 +1,16 @@
 from flask import Flask, request, render_template
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route('/')
+@application.route('/')
 def my_form():
     return render_template('my-form.html')
 
-@app.route('/', methods=['POST'])
+@application.route('/', methods=['POST'])
 def my_form_post():
     text = request.form['text']
     processed_text = text + " Wish you and your family Merry Christmas and Happy New Year!"
     return processed_text
 
 if __name__ == "__main__":
-    app.run()
+    application.run()
